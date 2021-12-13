@@ -10,7 +10,7 @@ type Config struct {
 	PgsqlUser     string `envconfig:"PGSQL_USER"`
 	PgsqlPassword string `envconfig:"PGSQL_PASSWORD"`
 	PgsqlDBName   string `envconfig:"PGSQL_DBNAME"`
-	PgsqlPort     uint16 `envconfig:"PGSQL_PORT"`
+	PgsqlPort     uint16 `envconfig:"PGSQL_PORT" default:"5432"`
 	PgsqlSSLMode  string `envconfig:"PGSQL_SSLMODE" default:"disable"`
 	PgsqlTimezone string `envconfig:"PGSQL_TIMEZONE" default:"Europe/London"`
 
