@@ -10,6 +10,12 @@ execute bash command
 set -o allexport; source .env; set +o allexport
 ```
 
+#Health check
+```bash
+curl -iL -XGET -H "X-Health-Check: 1" http://localhost:8080
+```
+
+
 #Storages
 GoVote can use Postgress or Redis for store data.
 
