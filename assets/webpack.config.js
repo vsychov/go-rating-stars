@@ -11,7 +11,7 @@ module.exports = {
         clean: true,
     },
     plugins: [new HtmlWebpackPlugin({
-        publicPath: '/assets/assets/dist/'
+        publicPath: '../../assets/assets/dist/'
     })],
     optimization: {
         minimize: true,
