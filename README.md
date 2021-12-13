@@ -2,6 +2,7 @@
 [![codecov](https://codecov.io/gh/vsychov/go-rating-stars/branch/master/graph/badge.svg?token=7V853A3LYA)](https://codecov.io/gh/vsychov/go-rating-stars)
 [![Go Reference](https://pkg.go.dev/badge/github.com/vsychov/go-rating-stars.svg)](https://pkg.go.dev/github.com/vsychov/go-rating-stars)
 [![Go Report Card](https://goreportcard.com/badge/github.com/vsychov/go-rating-stars)](https://goreportcard.com/report/github.com/vsychov/go-rating-stars)
+[![Docker Repository on Quay](https://quay.io/repository/vsychov/go-rating-stars/status "Docker Repository on Quay")](https://quay.io/repository/vsychov/go-rating-stars)
 ---
 #Load env
 execute bash command
