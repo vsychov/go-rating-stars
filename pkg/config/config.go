@@ -18,7 +18,8 @@ type Config struct {
 	RedisPassword string `envconfig:"REDIS_PASSWORD" default:""`
 	RedisDB       int    `envconfig:"REDIS_DB" default:"0"`
 
-	StorageType string `envconfig:"STORAGE_TYPE" default:"pgsql"`
+	StorageType    string `envconfig:"STORAGE_TYPE" default:"pgsql"`
+	ClientIpHeader string `envconfig:"CLIENT_IP_HEADER" default:"X-Real-IP"`
 }
 
 // CreateFromEnv create new config instance from env variables

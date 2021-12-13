@@ -38,3 +38,5 @@ REDIS_DB=
 REDIS_PASSWORD=
 
 STORAGE_TYPE=pgsql or redis (default - pgsql), redis not fully implemented yet
+
+CLIENT_IP_HEADER="X-Real-Ip" #gin TrustedPlatform
