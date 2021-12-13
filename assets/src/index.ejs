@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GoVote</title>
+    <script>
+        var rating = {{ .Rating }};
+        var readOnly = {{ .ReadOnly }};
+        var resourceId = "{{ .ResourceId }}";
+    </script>
+</head>
+<body>
+<div id="rating-container">
+    <div id="rater"></div>
+    <span id="totalVotesContainer">(<span id="totalVotes">{{ .TotalVotes }}</span>)</span>
+</div>
+</body>
+</html>

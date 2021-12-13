@@ -1,0 +1,36 @@
+.star-rating {
+    background-image: url(../img/star_0.svg) !important;
+}
+.star-rating .star-value {
+    background: url('../img/star_1.svg') !important;
+}
+
+body.white #rating-container .star-rating {
+    background-image: url(../img/star_0-black.svg) !important;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background:none transparent;
+}
+
+body.white #rating-container span {
+    color: white;
+}
+
+#rating-container {
+    display: flex;
+}
+
+#rating-container span {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 14px;
+    line-height: 18px;
+    font-family: "robotoC","Helvetica Neue",Helvetica,Arial,sans-serif
+}
+
+#totalVotesContainer {
+    padding-left: 10px;
+}
