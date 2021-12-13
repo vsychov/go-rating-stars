@@ -9,6 +9,7 @@ import (
 	"github.com/vsychov/go-rating-stars/pkg/html"
 	"github.com/vsychov/go-rating-stars/pkg/voter"
 	"net/http"
+	"strings"
 )
 
 // ServeHttp start gin
@@ -22,6 +23,7 @@ func ServeHttp(distAssets embed.FS, voter voter.Voter, drawer html.Drawer, confi
 	r := gin.Default()
 	r.TrustedPlatform = config.ClientIpHeader
 	r.Use(healthcheck.Default())
+	r.Use(headersByRequestURI())
 
 	r.StaticFS("/assets", http.FS(distAssets))
 
@@ -34,4 +36,12 @@ func ServeHttp(distAssets embed.FS, voter voter.Voter, drawer html.Drawer, confi
 	}
 
 	return
+}
+
+func headersByRequestURI() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		if strings.HasPrefix(c.Request.RequestURI, "/assets/") {
+			c.Header("Cache-Control", "public, immutable, max-age=31536000")
+		}
+	}
 }
