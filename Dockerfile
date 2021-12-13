@@ -26,7 +26,7 @@ COPY main.go .
 
 RUN CGO_ENABLED=0 go build -ldflags "-s -w" -o build
 
-FROM alpine
+FROM mirror.gcr.io/library/alpine
 
 WORKDIR /app
 
