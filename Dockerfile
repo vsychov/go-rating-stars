@@ -1,4 +1,4 @@
-FROM node:16 as assets
+FROM mirror.gcr.io/library/node:16 as assets
 
 WORKDIR /assets
 
@@ -10,7 +10,7 @@ COPY assets ./
 
 RUN yarn build
 
-FROM golang:1.17-alpine as builder
+FROM mirror.gcr.io/library/golang:1.17-alpine as builder
 
 WORKDIR /go/src/app
 
