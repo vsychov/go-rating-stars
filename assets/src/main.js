@@ -22,7 +22,7 @@ async function postData(url = '', data = {}) {
 let raterAPI = rater({
     element: document.querySelector("#rater"),
     rateCallback: function rateCallback(rating, done) {
-        postData('/' + window.resourceId + '/vote/', {vote: rating})
+        postData('../../' + window.resourceId + '/vote/', {vote: rating})
             .then((data) => {
                 if (!data.hasOwnProperty('rating') || data.rating === 0) {
                     done();
