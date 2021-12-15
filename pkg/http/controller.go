@@ -56,6 +56,10 @@ func (cont controller) vote(c *gin.Context) {
 }
 
 func (cont controller) renderHtml(results voter.VoteResults, c *gin.Context) {
+	if c.Query("readOnly") == "true" {
+		results.AllowedToVote = false
+	}
+
 	htmlDoc, err := cont.Drawer.RenderHtml(c.Param("resource_id"), results)
 
 	if err != nil {
